@@ -1,0 +1,42 @@
+{
+    "about": "About Me",
+    "skills": "Skills",
+    "project": "Projects",
+    "contact": "Contscts",
+
+    "banner": {
+        "title": "I create modern interfaces <1 /> that will definitely catch attention.",
+        "desc": "I create responsive interfaces with clean code, user-friendly UX, and smooth animations. Fresh frontend with lemon-clean code and lime-bright design.",
+        "btnProject": "View Projects",
+        "btnContact": "Get in touch"
+    },
+
+    "hi": "Hello!",
+    "name1": "I'm",
+    "name2": "Veta Tsoy",
+    "dir": "Frontend Developer",
+    "desc1": "I am a beginner frontend developer and a student at Bucheon University. I enjoy the process of building websites and watching how an idea gradually turns into a real, working interface. I value clean, simple and user-friendly design, but I also like adding small details and creative touches that make a website feel more dynamic and engaging.",
+    "desc2": "I work with HTML, CSS, SCSS, JavaScript and React, and I have recently started learning TypeScript to improve my development skills..",
+    "desc3": "Although I am still at the beginning of my journey in frontend development, I am motivated to keep learning, practicing and improving my skills.",
+    "desc4": "I would be happy to collaborate and take part in interesting projects.",
+
+    "skillsTitle": "My skills",
+
+    "projects": {
+        "title": "My projects",
+        "desc": "These are some of the projects I’ve worked on.",
+        "cardDesc1":"Static website layout for Apple products with responsive design.",
+        "cardDesc2":"Static catalog website for men's accessories with responsive design.",
+        "cardDesc3": "Online food ordering service with basic JavaScript logic and calculation of price and calories.",
+        "cardDesc4": "Food ordering website with shopping cart logic.",
+        "cardDesc5": "Weather forecast website using an API and GET requests.", 
+        "cardDesc6": "Notes website for creating and editing notes with language switching."
+    },
+
+    "contacts": {
+        "title": "Contscts",
+        "desc": "Ready for interesting tasks and cooperation. Please contact me in any convenient way.",
+        "phone": "Phone"
+    },
+    "view": "View"
+}

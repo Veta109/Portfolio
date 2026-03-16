@@ -1,0 +1,44 @@
+@import "./fonts.scss";
+ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;   
+    border: none;
+}
+
+:root {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    scroll-behavior: smooth;
+
+    --bg: #0a0a0a;
+    --text: #f4ffc7;
+    --bg-up: #0c0c0c;
+    --bg-light: #0b0b0b;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    padding-top: 80px;
+}
+
+body.light {
+    --bg: #f9fafb;
+    --text: #111827;
+    --bg-up: #ffffff;
+    --bg-light: #e5e7eb;
+}
+
+.container {
+    max-width: 1230px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
