@@ -1,5 +1,4 @@
 import React from 'react';
-import "../scss/App.scss";
 import { useEffect, useRef, useState } from "react";
 import SkillItem from './SkillItem';
 import { useTranslation } from 'react-i18next';

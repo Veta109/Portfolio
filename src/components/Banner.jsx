@@ -1,5 +1,5 @@
 import React from 'react';
-import "../scss/App.scss";
+import "../assets/scss/App.scss";
 import { Trans, useTranslation } from 'react-i18next';
 
 const Banner = () => {

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import "../scss/App.scss";
 import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {

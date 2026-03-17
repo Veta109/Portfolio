@@ -1,0 +1,5 @@
+@mixin media($sixe) {
+    @media screen and (max-width: #{$sixe}px) {
+        @content;
+    }
+}

@@ -1,3 +1,4 @@
+@use "../scss/mixin.scss" as *;
 @import "./main.scss";
 
 .navbar {
@@ -10,14 +11,23 @@
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 10;
     backdrop-filter: blur(8px);
     border-bottom: 1px solid rgba(200, 255, 49, 0.2);
+
+    @include media(850) {
+        flex-direction: column;
+        gap: 20px;
+    }
 
     &__logo {
         font-family: "Montserrat", sans-serif;
         font-weight: 500;
         font-size: 40px;
+
+        @include media(470) {
+            order: 1;
+        }
     }
 
     &__list {
@@ -25,6 +35,12 @@
         align-items: center;
         gap: 30px;
         color: #c8ff31;
+
+        @include media(470) {
+            flex-direction: column;
+            gap: 10px;
+            order: 2;
+        }
 
         &-item {
             &_link {
@@ -96,6 +112,10 @@
         box-shadow: 0 0 6px #c8ff31;
         transition: 0.3s ease;
 
+        @include media(470) {
+            order: -1;
+        }
+
         &:hover {
             transform: translateY(-1px);
             box-shadow: 0 0 8px #c8ff31, 0 0 18px #8afc30;
@@ -117,8 +137,16 @@
     min-height: 420px;
     display: flex;
     align-items: center;
-    background: url(../assets/images/banner.png) no-repeat center/cover;
+    background: url(../images/banner.png) no-repeat center/cover;
     overflow: hidden;
+
+    @include media(850) {
+        margin-top: 120px;
+    }
+
+    @include media(470) {
+        margin-top: 250px;
+    }
 
     &::before {
         content: "";
@@ -134,10 +162,21 @@
         position: relative;
         z-index: 1;
         padding: 60px 0;
+
+        @include media(1260) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
     }
 
     &__content {
         max-width: 640px;
+
+        @include media(1260) {
+            margin: 0 auto;
+        }
     }
 
     &__tag {
@@ -159,6 +198,10 @@
         line-height: 1.2;
         color: #f4ffc7;
         margin-bottom: 16px;
+
+        @include media(550) {
+            font-size: 28px;
+        }
     }
 
     &__desc {
@@ -167,12 +210,20 @@
         color: #ffffffd9;
         max-width: 540px;
         margin-bottom: 24px;
+
+        @include media(1260) {
+            margin: 24px auto;
+        }
     }
 
     &__btns {
         display: flex;
         flex-wrap: wrap;
         gap: 14px;
+
+        @include media(1260) {
+            justify-content: center;
+        }
     }
 
     &__btn {
@@ -225,6 +276,15 @@
     align-items: center;
     gap: 100px;
 
+    @include media(1350) {
+        margin: 0 40px;
+    }
+
+    @include media(850) {
+        flex-direction: column;
+    }
+
+
     &__left {
         display: flex;
         flex-direction: column;
@@ -232,6 +292,11 @@
         opacity: 0;
         transform: translateY(20px);
         transition: all 0.6s ease;
+
+        @include media(470) {
+            justify-content: center;
+            text-align: center;
+        }
 
         &.visible {
             opacity: 1;
@@ -267,6 +332,10 @@
     }
 
     &__right {
+        @include media(850) {
+            order: -1;
+        }
+
         &-img {
             width: 390px;
             height: 400px;
@@ -276,6 +345,11 @@
                 0 0 25px #c8ff31,
                 0 0 50px #ddff00,
                 0 0 100px #ddff00;
+
+            @include media(1050) {
+                width: 300px;
+                height: 310px;
+            }
         }
     }
 }
@@ -480,6 +554,7 @@
 
     &__wrap {
         display: flex;
+        padding: 0 20px;
         justify-content: space-between;
         align-items: flex-start;
         gap: 40px;
@@ -603,7 +678,7 @@ body.light {
     }
 
     .banner {
-        background: url("../assets/images/bannerLight.png") no-repeat center/cover;
+        background: url("../images/bannerLight.png") no-repeat center/cover;
 
         &::before {
             background: linear-gradient(90deg, rgba(248, 250, 252, 0.65), rgba(248, 250, 252, 0));
