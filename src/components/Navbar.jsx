@@ -5,6 +5,7 @@ const Navbar = () => {
   const { i18n, t } = useTranslation();
   const [language, setLanguage] = useState(i18n.language);
   const [theme, setTheme] = useState('');
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const body = document.body;
@@ -37,12 +38,12 @@ const Navbar = () => {
             <span className="neon" style={{ color: '#8afc30' }}>&gt;</span>
           </p>
         </a>
-        <ul className="navbar__list">
+        <ul className={`navbar__list ${menuOpen ? "active" : ""}`} onClick={() => setMenuOpen(false)}>
           <li className="navbar__list-item">
             <a href="#about" className="navbar__list-item_link">{t("about")}</a>
           </li>
           <li className="navbar__list-item">
-            <a href="#skills" className="navbar__list-item_link">{t("skills")}</a>     
+            <a href="#skills" className="navbar__list-item_link">{t("skills")}</a>
           </li>
           <li className="navbar__list-item">
             <a href="#project" className="navbar__list-item_link">{t("project")}</a>
@@ -51,9 +52,16 @@ const Navbar = () => {
             <a href="#contacts" className="navbar__list-item_link">{t("contact")}</a>
           </li>
         </ul>
+        <div className={`navbar__menuBtn ${menuOpen ? "active" : ""}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <div className="navbar__wrap-btn">
           <button
-            className='navbar__btn'
+            className="navbar__btn"
             onClick={changeLanguage}
           >
             {language}
@@ -62,8 +70,8 @@ const Navbar = () => {
             className='navbar__btn navbar__btn--theme'
             onClick={changeTheme}
           >
-            {theme == 'light' ? <i className="far fa-moon" style={{color: "#58a000"}}></i> : <i className="fas fa-sun" style={{color: "#050801"}}></i>}
-            </button>
+            {theme == 'light' ? <i className="far fa-moon" style={{ color: "#58a000" }}></i> : <i className="fas fa-sun" style={{ color: "#050801" }}></i>}
+          </button>
         </div>
       </nav>
     </>
